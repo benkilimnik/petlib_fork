@@ -4,7 +4,7 @@ from setuptools import setup
 
 import petlib
 
-setup(name='petlib',
+setup(name='petlib_fork',
       version=petlib.VERSION,
       description='A library implementing a number of Privacy Enhancing Technologies (PETs)',
       author='George Danezis',
@@ -16,26 +16,26 @@ setup(name='petlib',
 
       setup_requires=["cffi>=1.0.0",
                       "pytest >= 2.6.4"],
-      package_data = {
-            "": ["_cffi_src/openssl/*"]
+      package_data={
+          "": ["_cffi_src/openssl/*"]
       },
-      include_package_data = True,
-      tests_require = [
-            "cffi >= 1.0.0",
-            "pycparser >= 2.10",
-            "future >= 0.14.3",
-            "pytest >= 2.5.0",
-            "pytest-cov >= 1.8.1",
-            "msgpack >= 1.0.4",
-            ],
+      include_package_data=True,
+      tests_require=[
+          "cffi >= 1.0.0",
+          "pycparser >= 2.10",
+          "future >= 0.14.3",
+          "pytest >= 2.5.0",
+          "pytest-cov >= 1.8.1",
+          "msgpack >= 1.0.4",
+      ],
       cffi_modules=["petlib/compile.py:_FFI"],
       install_requires=[
-            "cffi >= 1.0.0",
-            "pycparser >= 2.10",
-            "future >= 0.14.3",
-            "pytest >= 2.5.0",
-            "pytest-cov >= 1.8.1",
-            "msgpack >= 1.0.4",
+          "cffi >= 1.0.0",
+          "pycparser >= 2.10",
+          "future >= 0.14.3",
+          "pytest >= 2.5.0",
+          "pytest-cov >= 1.8.1",
+          "msgpack >= 1.0.4",
       ],
       zip_safe=False,
-)
+      )
